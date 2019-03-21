@@ -1,9 +1,12 @@
 <template>
+<div>
+  <h1>Hello Home</h1>
   <HelloWorld />
+</div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+  import HelloWorld from '@/components/HelloWorld'
 
   export default {
     components: {
