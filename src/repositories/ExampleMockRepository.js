@@ -9,14 +9,16 @@ const examples = [
 
 export default class {
   get() {
-    return examples;
+    return Promise.resolve(examples);
   }
 
   getExample(exampleId) {
-    return _.find(examples, example => example.id == exampleId);
+    return Promise.resolve(
+      _.find(examples, example => example.id == exampleId)
+    );
   }
 
   createExample(payload) {
-    return examples.push(payload);
+    return Promise.resolve(examples.push(payload));
   }
 }
