@@ -1,9 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h2>Example Child Component</h2>
   </div>
 </template>
-
 <script>
 export default {};
 </script>

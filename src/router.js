@@ -2,8 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/components/pages/home/Home.vue";
 import About from "@/components/pages/about/About.vue";
-import Random from "@/components/pages/random/Random.vue";
-import RandomChild from "@/components/pages/random/RandomChild.vue";
+import Example from "@/components/pages/example/Example.vue";
+import ExampleChild from "@/components/pages/example/ExampleChild.vue";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 
@@ -33,17 +33,17 @@ export default new Router({
       }
     },
     {
-      path: "/random",
-      name: "random",
+      path: "/example",
+      name: "example",
       components: {
         header: AppHeader,
-        default: Random,
+        default: Example,
         footer: AppFooter
       },
       children: [
-        { path: "", component: RandomChild }
+        { path: "", component: ExampleChild }
         // ...other sub routes
-      ],
+      ]
     }
   ]
 });
