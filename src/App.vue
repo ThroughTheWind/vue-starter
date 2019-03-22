@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <router-view name="header"></router-view>   
+    <router-view name="header"></router-view>
 
     <v-content>
       <router-view/>
@@ -10,14 +10,14 @@
   </v-app>
 </template>
 
-<script>
 
+<script>
 export default {
-  name: 'App',
-  data () {
+  name: "App",
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>

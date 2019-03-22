@@ -8,6 +8,8 @@ import _ from "lodash";
 import config from "./config";
 import i18n from "./i18n";
 
+require("./assets/flat-flags/css/main.css");
+
 //define lodash globally, can now be used using this.$_
 Object.defineProperty(Vue.prototype, "$_", { value: _ });
 Object.defineProperty(Vue.prototype, "$config", { value: config });

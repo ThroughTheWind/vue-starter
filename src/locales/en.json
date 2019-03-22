@@ -1,3 +1,7 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "localeChanger": {
+    "en-label": "English",
+    "fr-label": "French"
+  }
 }

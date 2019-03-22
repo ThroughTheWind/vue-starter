@@ -1,3 +1,7 @@
 {
-  "message": "salut i18n !!"
+  "message": "salut i18n !!",
+  "localeChanger": {
+    "en-label": "Anglais",
+    "fr-label": "Français"
+  }
 }

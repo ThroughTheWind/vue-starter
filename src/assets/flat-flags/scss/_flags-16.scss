@@ -1,0 +1,21 @@
+@import "variables";
+
+.flag {
+  background-image: url("../images/sprites@16px.png");
+  width: 16px;
+  height: 11px;
+  border-radius: 2px;
+}
+
+@for $i from 1 through length($country-codes) {
+
+  $code: nth($country-codes, $i);
+  @if $lower-case {
+    $code: to-lower-case($code);
+  }
+
+    .#{$prefix}-#{$code} {
+      background-position: 0 -11px * ($i - 1);
+    }
+
+}
