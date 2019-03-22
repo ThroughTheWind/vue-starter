@@ -45,7 +45,7 @@ export default {
   methods: {
     switchLocale(lang) {
       this.$i18n.locale = lang.value;
-      localStorage.setItem("locale") = lang.value;
+      localStorage.setItem("locale", lang.value);
     }
   }
 };
