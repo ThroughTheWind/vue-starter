@@ -42,7 +42,11 @@ export default new Router({
         footer: AppFooter
       },
       children: [
-        { path: "", component: ExampleChild }
+        {
+          path: "/example/child",
+          name: "exampleChild",
+          component: ExampleChild
+        }
         // ...other sub routes
       ]
     },
