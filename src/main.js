@@ -6,13 +6,15 @@ import { store } from "./store";
 import "./registerServiceWorker";
 import _ from "lodash";
 import config from "./config";
-import i18n from "./i18n";
 import VueLogger from "vuejs-logger";
+import Vue2Storage from "vue2-storage";
+import i18n from "./i18n";
 
 //Custom css
 require("./assets/flat-flags/css/main.css");
 
 const isProduction = process.env.NODE_ENV === "production";
+Vue.config.productionTip = false;
 
 //define lodash globally, can now be used using this.$_
 Object.defineProperty(Vue.prototype, "$_", { value: _ });
@@ -31,8 +33,11 @@ const loggerOptions = {
 };
 
 Vue.use(VueLogger, loggerOptions);
-
-Vue.config.productionTip = false;
+Vue.use(Vue2Storage, {
+  prefix: process.env.VUE_APP_STORAGE_PREFIX,
+  driver: "local",
+  ttl: 60 * 60 * 24 * 1000
+});
 
 new Vue({
   router,
