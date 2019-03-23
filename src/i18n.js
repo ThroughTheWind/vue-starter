@@ -20,11 +20,14 @@ function loadLocaleMessages() {
   return messages;
 }
 
+const localeKey = `${process.env.VUE_APP_STORAGE_PREFIX}locale`;
+console.log(localeKey);
+
 export default new VueI18n({
   locale:
-    localStorage.getItem("locale") || process.env.VUE_APP_I18N_LOCALE || "en",
+    localStorage.getItem(localeKey) || process.env.VUE_APP_I18N_LOCALE || "en",
   fallbackLocale:
-    localStorage.getItem("locale") ||
+    localStorage.getItem(localeKey) ||
     process.env.VUE_APP_I18N_FALLBACK_LOCALE ||
     "en",
   messages: loadLocaleMessages()

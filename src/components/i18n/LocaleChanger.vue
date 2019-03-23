@@ -45,7 +45,9 @@ export default {
   methods: {
     switchLocale(lang) {
       this.$i18n.locale = lang.value;
-      localStorage.setItem("locale", lang.value);
+      const localeKey = `${process.env.VUE_APP_STORAGE_PREFIX}locale`;
+      this.$log.debug("Switching language", localeKey, lang.value);
+      localStorage.setItem(localeKey, lang.value);
     }
   }
 };
