@@ -2,6 +2,8 @@
   <div>
     <h1>{{ $t('title') }}</h1>
     <p>{{ $t('hello') }}</p>
+    <p>{{ $d(new Date(), 'short') }}</p>
+    <p>{{ $n(100, 'currency') }}</p>
   </div>
 </template>
 

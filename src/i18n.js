@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueI18n from "vue-i18n";
+import dateTimeFormats from "./locales/formats/dateFormats";
+import numberFormats from "./locales/formats/numberFormats";
 
 Vue.use(VueI18n);
 
@@ -21,7 +23,6 @@ function loadLocaleMessages() {
 }
 
 const localeKey = `${process.env.VUE_APP_STORAGE_PREFIX}locale`;
-console.log(localeKey);
 
 export default new VueI18n({
   locale:
@@ -30,5 +31,7 @@ export default new VueI18n({
     localStorage.getItem(localeKey) ||
     process.env.VUE_APP_I18N_FALLBACK_LOCALE ||
     "en",
-  messages: loadLocaleMessages()
+  messages: loadLocaleMessages(),
+  dateTimeFormats,
+  numberFormats
 });
